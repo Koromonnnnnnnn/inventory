@@ -2,6 +2,9 @@
 using namespace std; // makes iostream work better
 
 string inventory[10];
+
+void itemDropper();
+
 int gold = 100;
 void shop();
 
@@ -131,5 +134,23 @@ void shop()
             cout << "not an option, dummy" << endl;
         }
         break;
+    }
+}
+
+void itemDropper()
+{
+    int num = rand() % 100;
+    if (num < 20) {
+        cout << "you got a dirty sock" << endl;
+        inventory[2] = "sock";
+    }
+    else if (num < 50) {
+        cout << "you got a cupcake!" << endl;
+        inventory[3] = "cupcake";
+    
+    }
+    else if (num < 75){
+        cout << "you got a small frog" << endl;
+        inventory[4] = "frog";
     }
 }
